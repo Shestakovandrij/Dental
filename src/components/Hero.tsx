@@ -32,7 +32,6 @@ export default function Hero({ onOpenPopup }: { onOpenPopup: () => void }) {
 
     const createTween = () => {
       const items = galleryEl.querySelectorAll(".hero-gallery__item");
-
       if (flipCtxRef.current) flipCtxRef.current.revert();
       galleryEl.classList.remove("hero-gallery--final");
 
@@ -56,13 +55,11 @@ export default function Hero({ onOpenPopup }: { onOpenPopup: () => void }) {
           },
         });
         tl.add(flip);
-
         return () => gsap.set(items, { clearProps: "all" });
       });
     };
 
     createTween();
-
     const handleResize = () => {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(createTween, 200);
@@ -78,11 +75,7 @@ export default function Hero({ onOpenPopup }: { onOpenPopup: () => void }) {
 
   return (
     <div ref={wrapRef} className="hero-gallery-wrap">
-      <div
-        ref={galleryRef}
-        className="hero-gallery hero-gallery--bento"
-        id="hero-gallery"
-      >
+      <div ref={galleryRef} className="hero-gallery hero-gallery--bento" id="hero-gallery">
         {images.map((src, i) => (
           <div key={i} className="hero-gallery__item">
             <img src={src} alt="" draggable={false} decoding="async" />
@@ -90,31 +83,29 @@ export default function Hero({ onOpenPopup }: { onOpenPopup: () => void }) {
         ))}
       </div>
 
-      {/* Dark overlay */}
       <div className="absolute inset-0 bg-dark/60 z-10 pointer-events-none" />
 
-      {/* Content overlay */}
       <div className="absolute inset-0 z-20 flex items-center justify-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="hero-title font-[var(--font-heading)] text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-6">
-            Здорова усмішка
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="hero-title font-[var(--font-heading)] text-6xl sm:text-8xl lg:text-[10rem] xl:text-[12rem] font-bold text-white leading-[0.85] mb-8 tracking-tight">
+            Здорова
             <br />
-            без болю та страху
+            <span className="text-accent">усмішка</span>
           </h1>
-          <p className="hero-subtitle text-lg sm:text-xl lg:text-2xl text-white/85 mb-10 leading-relaxed max-w-2xl mx-auto">
+          <p className="hero-subtitle text-xl sm:text-2xl lg:text-3xl text-white/80 mb-12 leading-relaxed max-w-2xl mx-auto font-light">
             Лікування зубів, імплантація та естетична стоматологія в Києві з
             гарантією результату
           </p>
           <div className="hero-cta flex flex-col sm:flex-row gap-4 justify-center pointer-events-auto">
             <button
               onClick={onOpenPopup}
-              className="bg-accent hover:bg-accent-dark text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-accent/30 hover:-translate-y-0.5"
+              className="bg-accent hover:bg-accent-dark text-white px-10 py-5 rounded-full text-xl font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-accent/30 hover:-translate-y-0.5"
             >
               Записатися на консультацію
             </button>
             <a
               href="tel:+380671234567"
-              className="border-2 border-white/30 hover:border-white/60 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:bg-white/10 text-center"
+              className="border-2 border-white/30 hover:border-white/60 text-white px-10 py-5 rounded-full text-xl font-semibold transition-all duration-300 hover:bg-white/10 text-center"
             >
               +38 (067) 123-45-67
             </a>
@@ -122,7 +113,6 @@ export default function Hero({ onOpenPopup }: { onOpenPopup: () => void }) {
         </div>
       </div>
 
-      {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
         <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-bounce" />

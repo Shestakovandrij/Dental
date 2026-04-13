@@ -1,107 +1,63 @@
 "use client";
 
 const promos = [
-  {
-    title: "Перша консультація",
-    discount: "Безкоштовно",
-    desc: "Для нових пацієнтів — огляд та план лікування",
-    code: "FIRST",
-    color: "from-accent to-emerald-400",
-    valid: "до 30.04",
-  },
-  {
-    title: "Професійна чистка",
-    discount: "-30%",
-    desc: "Ультразвукова чистка + Air Flow зі знижкою",
-    code: "CLEAN30",
-    color: "from-primary to-blue-400",
-    valid: "до 30.04",
-  },
-  {
-    title: "Комплексне лікування",
-    discount: "-15%",
-    desc: "Знижка при лікуванні від 3-х зубів за один візит",
-    code: "COMPLEX",
-    color: "from-amber-500 to-orange-400",
-    valid: "до 30.04",
-  },
+  { title: "Перша консультація", discount: "Безкоштовно", desc: "Для нових пацієнтів — огляд та план лікування", code: "FIRST", color: "from-accent to-emerald-400", valid: "до 30.04" },
+  { title: "Професійна чистка", discount: "-30%", desc: "Ультразвукова чистка + Air Flow зі знижкою", code: "CLEAN30", color: "from-primary to-blue-400", valid: "до 30.04" },
+  { title: "Комплексне лікування", discount: "-15%", desc: "Знижка при лікуванні від 3-х зубів за один візит", code: "COMPLEX", color: "from-amber-500 to-orange-400", valid: "до 30.04" },
 ];
 
-export default function Promotions({
-  onOpenPopup,
-}: {
-  onOpenPopup: () => void;
-}) {
+export default function Promotions({ onOpenPopup }: { onOpenPopup: () => void }) {
   return (
-    <section className="py-24 lg:py-32 bg-gray-100">
+    <section className="py-32 lg:py-44 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 anim-fade-up">
-          <span className="inline-block text-accent font-semibold text-sm uppercase tracking-[0.2em] border border-accent/30 rounded-full px-5 py-1.5 mb-6">
-            Акції
-          </span>
-          <h2 className="font-[var(--font-heading)] text-3xl sm:text-4xl lg:text-5xl font-bold text-dark mb-4">
-            Спеціальні пропозиції
-          </h2>
-          <p className="text-gray-500 text-lg">
+        <div className="anim-fade-up mb-20 lg:mb-28">
+          <div className="flex items-end gap-6 mb-6">
+            <span className="text-[8rem] sm:text-[12rem] lg:text-[16rem] font-bold text-gray-100 leading-none font-[var(--font-heading)] -mb-4">
+              07
+            </span>
+            <div className="pb-4 lg:pb-8">
+              <span className="text-accent font-semibold text-sm uppercase tracking-[0.3em] block mb-2">
+                Акції
+              </span>
+              <h2 className="font-[var(--font-heading)] text-4xl sm:text-5xl lg:text-7xl font-bold text-dark leading-[0.9]">
+                Спеціальні
+                <br />
+                пропозиції
+              </h2>
+            </div>
+          </div>
+          <p className="text-gray-500 text-xl lg:text-2xl font-light">
             Назвіть промокод при записі
           </p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {promos.map((promo, i) => (
-            <div
-              key={i}
-              className="anim-fade-up group relative"
-            >
-              {/* Coupon card */}
-              <div className="relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
-                {/* Top gradient strip */}
+            <div key={i} className="anim-fade-up group relative">
+              <div className="relative bg-gray-50 rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
                 <div className={`h-2 bg-gradient-to-r ${promo.color}`} />
+                <div className="absolute left-0 top-[160px] -translate-x-1/2 w-6 h-6 bg-white rounded-full" />
+                <div className="absolute right-0 top-[160px] translate-x-1/2 w-6 h-6 bg-white rounded-full" />
 
-                {/* Coupon cutout circles */}
-                <div className="absolute left-0 top-[140px] -translate-x-1/2 w-6 h-6 bg-gray-100 rounded-full" />
-                <div className="absolute right-0 top-[140px] translate-x-1/2 w-6 h-6 bg-gray-100 rounded-full" />
-
-                {/* Top section: discount */}
-                <div className="px-8 pt-8 pb-6 text-center">
-                  <div
-                    className={`inline-block text-4xl lg:text-5xl font-bold bg-gradient-to-r ${promo.color} bg-clip-text text-transparent`}
-                  >
+                <div className="px-8 pt-10 pb-6 text-center">
+                  <div className={`inline-block text-5xl lg:text-7xl font-bold bg-gradient-to-r ${promo.color} bg-clip-text text-transparent font-[var(--font-heading)]`}>
                     {promo.discount}
                   </div>
-                  <h3 className="text-xl font-bold text-dark mt-3">
-                    {promo.title}
-                  </h3>
+                  <h3 className="text-2xl font-bold text-dark mt-4">{promo.title}</h3>
                 </div>
 
-                {/* Dashed divider */}
                 <div className="mx-8 border-t-2 border-dashed border-gray-200" />
 
-                {/* Bottom section: details */}
-                <div className="px-8 pt-5 pb-8">
-                  <p className="text-gray-500 text-center mb-5">
-                    {promo.desc}
-                  </p>
-
-                  {/* Promo code */}
-                  <div className="bg-gray-50 border-2 border-dashed border-gray-200 rounded-xl p-3 flex items-center justify-between group-hover:border-primary/30 transition-colors">
+                <div className="px-8 pt-6 pb-8">
+                  <p className="text-gray-500 text-center mb-6 text-lg">{promo.desc}</p>
+                  <div className="bg-white border-2 border-dashed border-gray-200 rounded-xl p-4 flex items-center justify-between group-hover:border-primary/30 transition-colors">
                     <div>
-                      <div className="text-[10px] uppercase tracking-wider text-gray-400 font-medium">
-                        Промокод
-                      </div>
-                      <div className="font-mono font-bold text-dark text-lg tracking-widest">
-                        {promo.code}
-                      </div>
+                      <div className="text-[10px] uppercase tracking-wider text-gray-400 font-medium">Промокод</div>
+                      <div className="font-mono font-bold text-dark text-xl tracking-widest">{promo.code}</div>
                     </div>
-                    <div className="text-xs text-gray-400">
-                      {promo.valid}
-                    </div>
+                    <div className="text-sm text-gray-400">{promo.valid}</div>
                   </div>
-
-                  <button
-                    onClick={onOpenPopup}
-                    className={`mt-5 w-full py-3 rounded-xl font-semibold text-white bg-gradient-to-r ${promo.color} hover:shadow-lg transition-all duration-300 text-sm`}
-                  >
+                  <button onClick={onOpenPopup} className={`mt-6 w-full py-4 rounded-xl font-semibold text-white bg-gradient-to-r ${promo.color} hover:shadow-lg transition-all duration-300 text-base`}>
                     Записатися з промокодом
                   </button>
                 </div>
