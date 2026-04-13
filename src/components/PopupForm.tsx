@@ -90,7 +90,7 @@ export default function PopupForm({
           </svg>
         </button>
 
-        <h3 className="font-[var(--font-heading)] text-2xl font-bold text-dark mb-2">
+        <h3 className="font-display text-2xl font-bold text-dark mb-2">
           Запишіться на прийом
         </h3>
         <p className="text-gray-500 mb-6">

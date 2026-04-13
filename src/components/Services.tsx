@@ -165,10 +165,10 @@ export default function Services({ onOpenPopup }: { onOpenPopup: () => void }) {
                 >
                   <div className="swipe-heading text-center px-6 max-w-5xl">
                     {/* Giant index */}
-                    <div className="text-white/10 text-[8rem] sm:text-[12rem] lg:text-[16rem] font-bold font-[var(--font-heading)] leading-none mb-[-2rem] sm:mb-[-4rem] lg:mb-[-6rem]">
+                    <div className="text-white/10 text-[8rem] sm:text-[12rem] lg:text-[16rem] font-bold font-display leading-none mb-[-2rem] sm:mb-[-4rem] lg:mb-[-6rem]">
                       {String(i + 1).padStart(2, "0")}
                     </div>
-                    <h2 className="text-4xl sm:text-6xl lg:text-8xl xl:text-9xl font-bold text-white font-[var(--font-heading)] leading-[0.9] mb-6">
+                    <h2 className="text-4xl sm:text-6xl lg:text-8xl xl:text-9xl font-bold text-white font-display leading-[0.9] mb-6">
                       {service.title}
                     </h2>
                     <p className="text-white/70 text-lg sm:text-xl lg:text-2xl font-light max-w-2xl mx-auto">

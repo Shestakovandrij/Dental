@@ -15,14 +15,14 @@ export default function Process() {
         {/* Giant heading */}
         <div className="anim-fade-up mb-20 lg:mb-28">
           <div className="flex items-end gap-6 mb-6">
-            <span className="text-[8rem] sm:text-[12rem] lg:text-[16rem] font-bold text-white/5 leading-none font-[var(--font-heading)] -mb-4">
+            <span className="text-[8rem] sm:text-[12rem] lg:text-[16rem] font-bold text-white/5 leading-none font-display -mb-4">
               04
             </span>
             <div className="pb-4 lg:pb-8">
               <span className="text-accent font-semibold text-sm uppercase tracking-[0.3em] block mb-2">
                 Процес
               </span>
-              <h2 className="font-[var(--font-heading)] text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-[0.9]">
+              <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-[0.9]">
                 Як проходить
                 <br />
                 лікування
@@ -39,7 +39,7 @@ export default function Process() {
               className="anim-fade-up group flex items-center gap-6 lg:gap-12 py-8 lg:py-12 border-t border-white/10 last:border-b"
             >
               {/* Giant step number */}
-              <span className="text-6xl sm:text-7xl lg:text-[7rem] font-bold text-white/10 font-[var(--font-heading)] leading-none w-24 sm:w-32 lg:w-44 text-right flex-shrink-0 group-hover:text-accent/30 transition-colors duration-500">
+              <span className="text-6xl sm:text-7xl lg:text-[7rem] font-bold text-white/10 font-display leading-none w-24 sm:w-32 lg:w-44 text-right flex-shrink-0 group-hover:text-accent/30 transition-colors duration-500">
                 {String(i + 1).padStart(2, "0")}
               </span>
 

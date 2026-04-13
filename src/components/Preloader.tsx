@@ -48,7 +48,7 @@ export default function Preloader({ onComplete }: { onComplete: () => void }) {
           width={80}
           height={80}
         />
-        <span className="font-[var(--font-heading)] text-2xl font-bold text-primary">
+        <span className="font-display text-2xl font-bold text-primary">
           Dental Care
         </span>
       </div>

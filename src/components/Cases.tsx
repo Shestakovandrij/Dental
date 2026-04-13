@@ -42,14 +42,14 @@ export default function Cases() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="anim-fade-up mb-16 lg:mb-24">
           <div className="flex items-end gap-6 mb-6">
-            <span className="text-[8rem] sm:text-[12rem] lg:text-[16rem] font-bold text-gray-200 leading-none font-[var(--font-heading)] -mb-4">
+            <span className="text-[8rem] sm:text-[12rem] lg:text-[16rem] font-bold text-gray-200 leading-none font-display -mb-4">
               05
             </span>
             <div className="pb-4 lg:pb-8">
               <span className="text-accent font-semibold text-sm uppercase tracking-[0.3em] block mb-2">
                 Кейси
               </span>
-              <h2 className="font-[var(--font-heading)] text-4xl sm:text-5xl lg:text-7xl font-bold text-dark leading-[0.9]">
+              <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold text-dark leading-[0.9]">
                 Результати
               </h2>
             </div>

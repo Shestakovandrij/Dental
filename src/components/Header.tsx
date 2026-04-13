@@ -42,7 +42,7 @@ export default function Header({ onOpenPopup }: { onOpenPopup: () => void }) {
             height={40}
           />
           <span
-            className={`font-[var(--font-heading)] text-xl font-bold transition-colors duration-300 ${
+            className={`font-display text-xl font-bold transition-colors duration-300 ${
               scrolled ? "text-primary" : "text-white"
             }`}
           >

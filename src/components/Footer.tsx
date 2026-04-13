@@ -33,7 +33,7 @@ export default function Footer() {
           {Array.from({ length: 8 }).map((_, i) => (
             <span
               key={i}
-              className="mx-8 text-2xl lg:text-3xl font-bold font-[var(--font-heading)] text-white/10 uppercase tracking-widest flex-shrink-0"
+              className="mx-8 text-2xl lg:text-3xl font-bold font-display text-white/10 uppercase tracking-widest flex-shrink-0"
             >
               Dental Care Kyiv
               <span className="mx-6 text-accent/30">&#9679;</span>
@@ -54,7 +54,7 @@ export default function Footer() {
                 width={36}
                 height={36}
               />
-              <span className="font-[var(--font-heading)] text-lg font-bold text-white">
+              <span className="font-display text-lg font-bold text-white">
                 Dental Care
               </span>
             </div>

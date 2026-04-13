@@ -40,7 +40,7 @@ function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: str
   }, [target]);
 
   return (
-    <div ref={ref} className="text-6xl sm:text-7xl lg:text-[8rem] font-bold text-primary leading-none font-[var(--font-heading)]">
+    <div ref={ref} className="text-6xl sm:text-7xl lg:text-[8rem] font-bold text-primary leading-none font-display">
       {count}
       {suffix}
     </div>
@@ -54,14 +54,14 @@ export default function Advantages() {
         {/* Giant heading */}
         <div className="anim-fade-up mb-20 lg:mb-28">
           <div className="flex items-end gap-6 mb-6">
-            <span className="text-[8rem] sm:text-[12rem] lg:text-[16rem] font-bold text-gray-100 leading-none font-[var(--font-heading)] -mb-4">
+            <span className="text-[8rem] sm:text-[12rem] lg:text-[16rem] font-bold text-gray-100 leading-none font-display -mb-4">
               03
             </span>
             <div className="pb-4 lg:pb-8">
               <span className="text-accent font-semibold text-sm uppercase tracking-[0.3em] block mb-2">
                 Переваги
               </span>
-              <h2 className="font-[var(--font-heading)] text-4xl sm:text-5xl lg:text-7xl font-bold text-dark leading-[0.9]">
+              <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold text-dark leading-[0.9]">
                 Чому обирають нас
               </h2>
             </div>
@@ -95,7 +95,7 @@ export default function Advantages() {
               className="anim-fade-up group flex items-center gap-8 lg:gap-12 py-8 lg:py-10 cursor-default hover:bg-gray-50/50 -mx-6 px-6 rounded-2xl transition-colors duration-300"
             >
               {/* Giant number */}
-              <span className="hidden sm:block text-6xl lg:text-8xl font-bold text-gray-100 font-[var(--font-heading)] group-hover:text-primary/20 transition-colors duration-300 w-28 lg:w-36 text-right flex-shrink-0">
+              <span className="hidden sm:block text-6xl lg:text-8xl font-bold text-gray-100 font-display group-hover:text-primary/20 transition-colors duration-300 w-28 lg:w-36 text-right flex-shrink-0">
                 {String(i + 1).padStart(2, "0")}
               </span>
 

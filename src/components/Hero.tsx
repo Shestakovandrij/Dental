@@ -87,7 +87,7 @@ export default function Hero({ onOpenPopup }: { onOpenPopup: () => void }) {
 
       <div className="absolute inset-0 z-20 flex items-center justify-center">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="hero-title font-[var(--font-heading)] text-6xl sm:text-8xl lg:text-[10rem] xl:text-[12rem] font-bold text-white leading-[0.85] mb-8 tracking-tight">
+          <h1 className="hero-title font-display text-6xl sm:text-8xl lg:text-[10rem] xl:text-[12rem] font-bold text-white leading-[0.85] mb-8 tracking-tight">
             Здорова
             <br />
             <span className="text-accent">усмішка</span>

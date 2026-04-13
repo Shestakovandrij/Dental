@@ -12,14 +12,14 @@ export default function Promotions({ onOpenPopup }: { onOpenPopup: () => void })
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="anim-fade-up mb-20 lg:mb-28">
           <div className="flex items-end gap-6 mb-6">
-            <span className="text-[8rem] sm:text-[12rem] lg:text-[16rem] font-bold text-gray-100 leading-none font-[var(--font-heading)] -mb-4">
+            <span className="text-[8rem] sm:text-[12rem] lg:text-[16rem] font-bold text-gray-100 leading-none font-display -mb-4">
               07
             </span>
             <div className="pb-4 lg:pb-8">
               <span className="text-accent font-semibold text-sm uppercase tracking-[0.3em] block mb-2">
                 Акції
               </span>
-              <h2 className="font-[var(--font-heading)] text-4xl sm:text-5xl lg:text-7xl font-bold text-dark leading-[0.9]">
+              <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold text-dark leading-[0.9]">
                 Спеціальні
                 <br />
                 пропозиції
@@ -40,7 +40,7 @@ export default function Promotions({ onOpenPopup }: { onOpenPopup: () => void })
                 <div className="absolute right-0 top-[160px] translate-x-1/2 w-6 h-6 bg-white rounded-full" />
 
                 <div className="px-8 pt-10 pb-6 text-center">
-                  <div className={`inline-block text-5xl lg:text-7xl font-bold bg-gradient-to-r ${promo.color} bg-clip-text text-transparent font-[var(--font-heading)]`}>
+                  <div className={`inline-block text-5xl lg:text-7xl font-bold bg-gradient-to-r ${promo.color} bg-clip-text text-transparent font-display`}>
                     {promo.discount}
                   </div>
                   <h3 className="text-2xl font-bold text-dark mt-4">{promo.title}</h3>

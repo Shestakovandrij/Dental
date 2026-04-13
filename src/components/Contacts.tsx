@@ -24,7 +24,7 @@ export default function Contacts() {
           <span className="text-accent font-semibold text-sm uppercase tracking-wider mb-4 block">
             Контакти
           </span>
-          <h2 className="font-[var(--font-heading)] text-3xl sm:text-4xl lg:text-5xl font-bold text-dark">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-dark">
             Запишіться на прийом
           </h2>
         </div>

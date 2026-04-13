@@ -5,13 +5,13 @@ export default function FinalCTA({ onOpenPopup }: { onOpenPopup: () => void }) {
     <section className="py-32 lg:py-44 bg-dark text-white text-center relative overflow-hidden">
       {/* Giant background text */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
-        <span className="text-[12rem] sm:text-[20rem] lg:text-[30rem] font-bold text-white/[0.02] font-[var(--font-heading)] leading-none whitespace-nowrap">
+        <span className="text-[12rem] sm:text-[20rem] lg:text-[30rem] font-bold text-white/[0.02] font-display leading-none whitespace-nowrap">
           DC
         </span>
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 anim-fade-up">
-        <h2 className="font-[var(--font-heading)] text-5xl sm:text-6xl lg:text-8xl font-bold mb-8 leading-[0.9]">
+        <h2 className="font-display text-5xl sm:text-6xl lg:text-8xl font-bold mb-8 leading-[0.9]">
           Не відкладайте
           <br />
           <span className="text-accent">лікування</span>
