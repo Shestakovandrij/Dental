@@ -87,12 +87,12 @@ export default function Hero({ onOpenPopup }: { onOpenPopup: () => void }) {
 
       <div className="absolute inset-0 z-20 flex items-center justify-center">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="hero-title font-display text-6xl sm:text-8xl lg:text-[10rem] xl:text-[12rem] font-bold text-white leading-[0.85] mb-8 tracking-tight">
-            Здорова
+          <h1 className="hero-title font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-6">
+            Здорова усмішка
             <br />
-            <span className="text-accent">усмішка</span>
+            <span className="text-accent">без болю та страху</span>
           </h1>
-          <p className="hero-subtitle text-xl sm:text-2xl lg:text-3xl text-white/80 mb-12 leading-relaxed max-w-2xl mx-auto font-light">
+          <p className="hero-subtitle text-lg sm:text-xl lg:text-2xl text-white/85 mb-10 leading-relaxed max-w-2xl mx-auto">
             Лікування зубів, імплантація та естетична стоматологія в Києві з
             гарантією результату
           </p>

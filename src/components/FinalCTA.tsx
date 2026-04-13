@@ -2,39 +2,24 @@
 
 export default function FinalCTA({ onOpenPopup }: { onOpenPopup: () => void }) {
   return (
-    <section className="py-32 lg:py-44 bg-dark text-white text-center relative overflow-hidden">
-      {/* 3D Tooth waypoint 4 (final) */}
-      <div className="tooth-wp-4 absolute bottom-24 left-1/2 -translate-x-1/2 hidden sm:block">
+    <section className="py-20 lg:py-28 bg-dark text-white text-center relative overflow-visible">
+      {/* 3D Tooth waypoint 4 */}
+      <div className="tooth-wp-4 absolute bottom-20 left-1/2 -translate-x-1/2 hidden sm:block">
         <div className="tooth-marker" />
       </div>
 
-      {/* Giant background text */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
-        <span className="text-[12rem] sm:text-[20rem] lg:text-[30rem] font-bold text-white/[0.02] font-display leading-none whitespace-nowrap">
-          DC
-        </span>
-      </div>
-
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 anim-fade-up">
-        <h2 className="font-display text-5xl sm:text-6xl lg:text-8xl font-bold mb-8 leading-[0.9]">
-          Не відкладайте
-          <br />
-          <span className="text-accent">лікування</span>
+      <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 anim-fade-up">
+        <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+          Не відкладайте <span className="text-accent">лікування</span>
         </h2>
-        <p className="text-white/50 text-xl lg:text-2xl mb-14 font-light">
+        <p className="text-white/50 text-lg mb-10 font-light">
           Запишіться прямо зараз у Telegram або зателефонуйте
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button
-            onClick={onOpenPopup}
-            className="bg-accent hover:bg-accent-dark text-white px-10 py-5 rounded-full text-xl font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-accent/30"
-          >
+          <button onClick={onOpenPopup} className="bg-accent hover:bg-accent-dark text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-accent/30">
             Записатися на консультацію
           </button>
-          <a
-            href="tel:+380671234567"
-            className="border-2 border-white/30 hover:border-white/60 text-white px-10 py-5 rounded-full text-xl font-semibold transition-all duration-300 hover:bg-white/10"
-          >
+          <a href="tel:+380671234567" className="border-2 border-white/30 hover:border-white/60 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:bg-white/10">
             Зателефонувати
           </a>
         </div>

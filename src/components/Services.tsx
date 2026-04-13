@@ -129,14 +129,14 @@ export default function Services({ onOpenPopup }: { onOpenPopup: () => void }) {
               }}
             />
             <div className="srv-heading absolute inset-0 flex items-center justify-center z-10">
-              <div className="text-center px-6 max-w-5xl">
-                <div className="text-white/10 text-[5rem] sm:text-[7rem] lg:text-[9rem] font-bold font-display leading-none mb-[-1rem] sm:mb-[-2rem] lg:mb-[-3rem]">
-                  {String(i + 1).padStart(2, "0")}
-                </div>
-                <h2 className="text-4xl sm:text-6xl lg:text-8xl xl:text-9xl font-bold text-white font-display leading-[0.9] mb-6">
+              <div className="text-center px-6 max-w-4xl">
+                <span className="text-accent text-sm font-semibold uppercase tracking-[0.2em] mb-4 block">
+                  {String(i + 1).padStart(2, "0")} / {String(services.length).padStart(2, "0")}
+                </span>
+                <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white font-display leading-tight mb-4">
                   {service.title}
                 </h2>
-                <p className="text-white/70 text-lg sm:text-xl lg:text-2xl font-light max-w-2xl mx-auto">
+                <p className="text-white/70 text-lg sm:text-xl font-light max-w-xl mx-auto">
                   {service.desc}
                 </p>
               </div>
