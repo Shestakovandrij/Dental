@@ -20,7 +20,6 @@ import Footer from "@/components/Footer";
 import PopupForm from "@/components/PopupForm";
 import MobileCTA from "@/components/MobileCTA";
 import CustomCursor from "@/components/CustomCursor";
-import Tooth3D from "@/components/Tooth3D";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -104,7 +103,6 @@ export default function Home() {
       <Footer />
       <MobileCTA onOpenPopup={openPopup} />
       <PopupForm isOpen={popupOpen} onClose={closePopup} />
-      {!loading && <Tooth3D />}
     </>
   );
 }
