@@ -2,12 +2,7 @@
 
 export default function FinalCTA({ onOpenPopup }: { onOpenPopup: () => void }) {
   return (
-    <section className="py-20 lg:py-28 bg-dark text-white text-center relative overflow-visible">
-      {/* 3D Tooth waypoint 4 */}
-      <div className="tooth-wp-4 absolute bottom-20 left-1/2 -translate-x-1/2 hidden sm:block">
-        <div className="tooth-marker" />
-      </div>
-
+    <section className="py-20 lg:py-28 bg-dark text-white text-center relative overflow-hidden">
       <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 anim-fade-up">
         <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
           Не відкладайте <span className="text-accent">лікування</span>

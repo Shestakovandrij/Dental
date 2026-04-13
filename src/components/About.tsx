@@ -4,10 +4,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section id="about" className="py-20 lg:py-28 bg-white overflow-visible relative">
-      {/* 3D Tooth waypoint 1 (start) */}
-      <div className="tooth-wp-1 absolute top-20 right-[5%] lg:right-[8%] hidden sm:block" />
-
+    <section id="about" className="py-20 lg:py-28 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="anim-fade-up mb-4">
           <span className="text-accent font-semibold text-sm uppercase tracking-[0.2em]">

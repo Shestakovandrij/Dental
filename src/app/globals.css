@@ -197,32 +197,12 @@ body {
 
 /* 3D Tooth canvas */
 canvas.tooth-canvas {
-  width: 140px;
-  height: 140px;
+  width: 150px;
+  height: 150px;
   display: block;
   border-radius: 16px;
   background: transparent;
-  z-index: 30;
   pointer-events: none;
-}
-
-@media (min-width: 1024px) {
-  canvas.tooth-canvas {
-    width: 180px;
-    height: 180px;
-  }
-}
-
-.tooth-marker {
-  width: 140px;
-  height: 140px;
-}
-
-@media (min-width: 1024px) {
-  .tooth-marker {
-    width: 180px;
-    height: 180px;
-  }
 }
 
 /* Marquee animation */

@@ -47,12 +47,7 @@ function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: str
 
 export default function Advantages() {
   return (
-    <section id="advantages" className="py-20 lg:py-28 bg-white relative overflow-visible">
-      {/* 3D Tooth waypoint 2 */}
-      <div className="tooth-wp-2 absolute top-32 left-[5%] hidden sm:block">
-        <div className="tooth-marker" />
-      </div>
-
+    <section id="advantages" className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 anim-fade-up">
           <span className="text-accent font-semibold text-sm uppercase tracking-[0.2em] mb-4 block">Переваги</span>
