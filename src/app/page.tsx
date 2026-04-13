@@ -74,6 +74,9 @@ export default function Home() {
         "-=0.3"
       );
 
+    // Refresh ScrollTrigger after all content is rendered (for Hero pin)
+    ScrollTrigger.refresh();
+
     return () => {
       ScrollTrigger.getAll().forEach((t) => t.kill());
     };
