@@ -111,7 +111,7 @@ export default function Cases() {
 
   return (
     <section className="py-20 lg:py-28 bg-gray-100 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-8">
         <div className="text-center mb-12 anim-fade-up">
           <span className="text-accent font-semibold text-sm uppercase tracking-[0.2em] mb-4 block">Кейси</span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-dark mb-3">Результати наших пацієнтів</h2>
@@ -138,7 +138,7 @@ export default function Cases() {
           ))}
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 flex items-center justify-center gap-6">
+        <div className="w-full px-4 sm:px-8 mt-8 flex items-center justify-center gap-6">
           <button onClick={() => scrollTo(Math.max(active - 1, 0))} disabled={active === 0} className="w-12 h-12 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-400 hover:border-primary hover:text-primary disabled:opacity-30 transition-all" aria-label="Попередній">
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" /></svg>
           </button>

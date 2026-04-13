@@ -19,7 +19,7 @@ export default function Contacts() {
 
   return (
     <section id="contacts" className="py-20 lg:py-28 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-8">
         <div className="text-center mb-16 anim-fade-up">
           <span className="text-accent font-semibold text-sm uppercase tracking-wider mb-4 block">
             Контакти

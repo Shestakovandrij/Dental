@@ -43,7 +43,7 @@ export default function Footer() {
       </div>
 
       {/* Main footer content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="w-full px-4 sm:px-8 py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {/* Logo + description */}
           <div className="sm:col-span-2 lg:col-span-1">
@@ -165,7 +165,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="w-full px-4 sm:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs">
             &copy; {year ?? ""} Dental Care Kyiv. Всі права захищені.
           </p>

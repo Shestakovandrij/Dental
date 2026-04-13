@@ -86,7 +86,7 @@ export default function Hero({ onOpenPopup }: { onOpenPopup: () => void }) {
       <div className="absolute inset-0 bg-dark/60 z-10 pointer-events-none" />
 
       <div className="absolute inset-0 z-20 flex items-center justify-center">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="w-full px-4 sm:px-8 text-center">
           <h1 className="hero-title font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-6">
             Здорова усмішка
             <br />

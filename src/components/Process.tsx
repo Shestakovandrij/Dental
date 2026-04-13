@@ -56,14 +56,14 @@ const steps = [
 export default function Process() {
   return (
     <section id="process" className="py-20 lg:py-28 bg-gray-100 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-8">
         <div className="text-center mb-16 anim-fade-up">
           <span className="text-accent font-semibold text-sm uppercase tracking-[0.2em] mb-4 block">Процес</span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-dark">Як проходить лікування</h2>
         </div>
 
         {/* Vertical timeline */}
-        <div className="relative max-w-4xl mx-auto">
+        <div className="relative max-w-5xl mx-auto">
           {/* Connecting line */}
           <div className="absolute left-6 lg:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/20 via-primary/40 to-accent/20 lg:-translate-x-px" />
 

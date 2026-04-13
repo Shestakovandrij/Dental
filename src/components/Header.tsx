@@ -32,7 +32,7 @@ export default function Header({ onOpenPopup }: { onOpenPopup: () => void }) {
           : "bg-transparent py-5"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="w-full px-4 sm:px-8 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-3">
           <Image
