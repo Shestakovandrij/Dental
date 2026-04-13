@@ -52,37 +52,34 @@ export default function Services({ onOpenPopup }: { onOpenPopup: () => void }) {
     gsap.set(slides, { autoAlpha: 0 });
     gsap.set(slides[0], { autoAlpha: 1 });
 
+    // Each transition = exactly 1 unit, total scroll = (total-1) viewports
+    const transitions = total - 1;
+
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: section,
         start: "top top",
-        end: `+=${total * 100}%`,
+        end: `+=${transitions * 100}%`,
         pin: true,
-        scrub: 0.5,
+        scrub: 0.3,
+        snap: {
+          snapTo: 1 / transitions,
+          duration: { min: 0.2, max: 0.4 },
+          ease: "power1.inOut",
+        },
       },
     });
 
-    // For each transition between slides
-    for (let i = 0; i < total - 1; i++) {
+    // Each transition is exactly 1 unit — 1 scroll viewport = 1 card switch
+    for (let i = 0; i < transitions; i++) {
+      const t = i; // start time for this transition
       tl
-        // Fade out current background + heading
-        .to(backgrounds[i], { yPercent: -15, duration: 1 }, `slide${i}`)
-        .to(headings[i], { autoAlpha: 0, yPercent: -30, duration: 0.5 }, `slide${i}`)
-        .set(slides[i], { autoAlpha: 0 }, `slide${i}+=0.5`)
-        // Bring in next slide
-        .set(slides[i + 1], { autoAlpha: 1 }, `slide${i}+=0.5`)
-        .fromTo(
-          backgrounds[i + 1],
-          { yPercent: 15 },
-          { yPercent: 0, duration: 1 },
-          `slide${i}+=0.5`
-        )
-        .fromTo(
-          headings[i + 1],
-          { autoAlpha: 0, yPercent: 60 },
-          { autoAlpha: 1, yPercent: 0, duration: 0.8, ease: "power2.out" },
-          `slide${i}+=0.7`
-        );
+        .to(backgrounds[i], { yPercent: -15, duration: 0.5 }, t)
+        .to(headings[i], { autoAlpha: 0, yPercent: -40, duration: 0.4 }, t)
+        .set(slides[i], { autoAlpha: 0 }, t + 0.5)
+        .set(slides[i + 1], { autoAlpha: 1 }, t + 0.5)
+        .fromTo(backgrounds[i + 1], { yPercent: 15 }, { yPercent: 0, duration: 0.5 }, t + 0.5)
+        .fromTo(headings[i + 1], { autoAlpha: 0, yPercent: 50 }, { autoAlpha: 1, yPercent: 0, duration: 0.4, ease: "power2.out" }, t + 0.6);
     }
 
     return () => {
@@ -133,7 +130,7 @@ export default function Services({ onOpenPopup }: { onOpenPopup: () => void }) {
             />
             <div className="srv-heading absolute inset-0 flex items-center justify-center z-10">
               <div className="text-center px-6 max-w-5xl">
-                <div className="text-white/10 text-[8rem] sm:text-[12rem] lg:text-[16rem] font-bold font-display leading-none mb-[-2rem] sm:mb-[-4rem] lg:mb-[-6rem]">
+                <div className="text-white/10 text-[5rem] sm:text-[7rem] lg:text-[9rem] font-bold font-display leading-none mb-[-1rem] sm:mb-[-2rem] lg:mb-[-3rem]">
                   {String(i + 1).padStart(2, "0")}
                 </div>
                 <h2 className="text-4xl sm:text-6xl lg:text-8xl xl:text-9xl font-bold text-white font-display leading-[0.9] mb-6">

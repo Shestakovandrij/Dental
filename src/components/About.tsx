@@ -9,14 +9,14 @@ export default function About() {
         {/* Giant section number */}
         <div className="anim-fade-up mb-16 lg:mb-24">
           <div className="flex items-end gap-6 mb-8">
-            <span className="text-[8rem] sm:text-[12rem] lg:text-[16rem] font-bold text-gray-100 leading-none font-display -mb-4">
+            <span className="text-[5rem] sm:text-[7rem] lg:text-[9rem] font-bold text-gray-100 leading-none font-display -mb-4">
               01
             </span>
             <div className="pb-4 lg:pb-8">
               <span className="text-accent font-semibold text-sm uppercase tracking-[0.3em] block mb-2">
                 Про клініку
               </span>
-              <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold text-dark leading-[0.9]">
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-dark leading-[0.9]">
                 Сучасна клініка
                 <br />
                 <span className="text-primary">в центрі Києва</span>
@@ -81,7 +81,7 @@ export default function About() {
                 { value: "100%", label: "гарантія" },
               ].map((stat, i) => (
                 <div key={i} className="group">
-                  <div className="text-4xl sm:text-5xl lg:text-7xl font-bold text-dark mb-1 group-hover:text-primary transition-colors duration-300 font-display">
+                  <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-dark mb-1 group-hover:text-primary transition-colors duration-300 font-display">
                     {stat.value}
                   </div>
                   <div className="text-sm lg:text-base text-gray-500">{stat.label}</div>

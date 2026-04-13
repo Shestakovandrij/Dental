@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -7,10 +7,10 @@ const inter = Inter({
   subsets: ["latin", "cyrillic"],
 });
 
-const spaceGrotesk = Space_Grotesk({
+const outfit = Outfit({
   variable: "--font-heading",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -34,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="uk" className={`${inter.variable} ${spaceGrotesk.variable}`} suppressHydrationWarning>
+    <html lang="uk" className={`${inter.variable} ${outfit.variable}`} suppressHydrationWarning>
       <body className="antialiased" suppressHydrationWarning>{children}</body>
     </html>
   );

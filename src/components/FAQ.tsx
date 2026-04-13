@@ -16,14 +16,14 @@ export default function FAQ() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="anim-fade-up mb-20 lg:mb-28">
           <div className="flex items-end gap-6 mb-6">
-            <span className="text-[8rem] sm:text-[12rem] lg:text-[16rem] font-bold text-gray-200 leading-none font-display -mb-4">
+            <span className="text-[5rem] sm:text-[7rem] lg:text-[9rem] font-bold text-gray-200 leading-none font-display -mb-4">
               08
             </span>
             <div className="pb-4 lg:pb-8">
               <span className="text-accent font-semibold text-sm uppercase tracking-[0.3em] block mb-2">
                 FAQ
               </span>
-              <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold text-dark leading-[0.9]">
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-dark leading-[0.9]">
                 Часті запитання
               </h2>
             </div>
