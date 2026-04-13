@@ -28,6 +28,8 @@ export default function Hero({ onOpenPopup }: { onOpenPopup: () => void }) {
     const wrapEl = wrapRef.current;
     if (!galleryEl || !wrapEl) return;
 
+    let resizeTimer: ReturnType<typeof setTimeout>;
+
     const createTween = () => {
       const items = galleryEl.querySelectorAll(".hero-gallery__item");
 
@@ -49,7 +51,7 @@ export default function Hero({ onOpenPopup }: { onOpenPopup: () => void }) {
             trigger: galleryEl,
             start: "center center",
             end: "+=100%",
-            scrub: true,
+            scrub: 0.5,
             pin: wrapEl,
           },
         });
@@ -60,21 +62,30 @@ export default function Hero({ onOpenPopup }: { onOpenPopup: () => void }) {
     };
 
     createTween();
-    window.addEventListener("resize", createTween);
+
+    const handleResize = () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(createTween, 200);
+    };
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener("resize", createTween);
+      window.removeEventListener("resize", handleResize);
+      clearTimeout(resizeTimer);
       if (flipCtxRef.current) flipCtxRef.current.revert();
     };
   }, []);
 
   return (
     <div ref={wrapRef} className="hero-gallery-wrap">
-      {/* Bento grid */}
-      <div ref={galleryRef} className="hero-gallery hero-gallery--bento" id="hero-gallery">
+      <div
+        ref={galleryRef}
+        className="hero-gallery hero-gallery--bento"
+        id="hero-gallery"
+      >
         {images.map((src, i) => (
           <div key={i} className="hero-gallery__item">
-            <img src={src} alt="" draggable={false} />
+            <img src={src} alt="" draggable={false} decoding="async" />
           </div>
         ))}
       </div>
