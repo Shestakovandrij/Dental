@@ -49,7 +49,12 @@ function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: str
 
 export default function Advantages() {
   return (
-    <section id="advantages" className="py-32 lg:py-44 bg-white">
+    <section id="advantages" className="py-32 lg:py-44 bg-white relative">
+      {/* 3D Tooth waypoint 2 */}
+      <div className="tooth-wp-2 absolute top-32 left-[5%] hidden sm:block">
+        <div className="tooth-marker" />
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Giant heading */}
         <div className="anim-fade-up mb-20 lg:mb-28">

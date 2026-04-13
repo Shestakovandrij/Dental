@@ -4,7 +4,12 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section id="about" className="py-32 lg:py-44 bg-white overflow-hidden">
+    <section id="about" className="py-32 lg:py-44 bg-white overflow-hidden relative">
+      {/* 3D Tooth waypoint 1 (start) */}
+      <div className="tooth-wp-1 absolute top-20 right-[5%] lg:right-[8%] hidden sm:block">
+        {/* Canvas will be injected here */}
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Giant section number */}
         <div className="anim-fade-up mb-16 lg:mb-24">

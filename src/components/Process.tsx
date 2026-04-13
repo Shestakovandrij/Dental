@@ -10,7 +10,12 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className="py-32 lg:py-44 bg-dark overflow-hidden">
+    <section id="process" className="py-32 lg:py-44 bg-dark overflow-hidden relative">
+      {/* 3D Tooth waypoint 3 */}
+      <div className="tooth-wp-3 absolute top-24 right-[5%] lg:right-[8%] hidden sm:block">
+        <div className="tooth-marker" />
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Giant heading */}
         <div className="anim-fade-up mb-20 lg:mb-28">

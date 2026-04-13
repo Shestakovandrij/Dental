@@ -3,6 +3,11 @@
 export default function FinalCTA({ onOpenPopup }: { onOpenPopup: () => void }) {
   return (
     <section className="py-32 lg:py-44 bg-dark text-white text-center relative overflow-hidden">
+      {/* 3D Tooth waypoint 4 (final) */}
+      <div className="tooth-wp-4 absolute bottom-24 left-1/2 -translate-x-1/2 hidden sm:block">
+        <div className="tooth-marker" />
+      </div>
+
       {/* Giant background text */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
         <span className="text-[12rem] sm:text-[20rem] lg:text-[30rem] font-bold text-white/[0.02] font-display leading-none whitespace-nowrap">
